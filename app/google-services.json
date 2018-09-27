@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "240446927514",
+    "firebase_url": "https://redsky-31e93.firebaseio.com",
+    "project_id": "redsky-31e93",
+    "storage_bucket": "redsky-31e93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240446927514:android:168803aaffca3e68",
+        "android_client_info": {
+          "package_name": "com.marvedie.redskyshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240446927514-vbofu7567onlvhcu6mlfcp61ba8cge6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.marvedie.redskyshop",
+            "certificate_hash": "442c54352297f4589539a9af070645fd91d378fc"
+          }
+        },
+        {
+          "client_id": "240446927514-qto0etdag0iuu68mu028u0sd51t99042.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhF9WZ4HzqkAuqO9CewRXeJb0M-cLgQa0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240446927514-qto0etdag0iuu68mu028u0sd51t99042.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
