@@ -31,13 +31,14 @@ public class NotificationsFragment extends Fragment {
             View view = inflater.inflate(R.layout.fragment_notifications, container, false);
 
             btnLogin = view.findViewById(R.id.btnLogin);
-            btnRegister = view.findViewById(R.id.btnLogin);
+            btnRegister = view.findViewById(R.id.btnRegister);
 
 
             btnLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     startActivity( new Intent(getActivity(), LoginActivity.class));
+
                 }
             });
 

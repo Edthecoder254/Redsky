@@ -18,8 +18,6 @@ public class Profile extends AppCompatActivity implements BottomNavigationView.O
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //set Theme
-        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
