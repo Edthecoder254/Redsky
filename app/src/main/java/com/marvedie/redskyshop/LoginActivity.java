@@ -36,8 +36,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (firebaseAuth.getCurrentUser() != null){
             //start profile activity
+
             finish();
-            startActivity(new Intent(getApplicationContext(),Profile.class));
+            startActivity(new Intent(getApplicationContext(),SendEmailActivity.class));
         }
         editTextEmail=  findViewById(R.id.editTextEmail);
         editTextPassword =  findViewById(R.id.editTextPassword);
@@ -91,7 +92,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if (task.isSuccessful()) {
                             //start the profile activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(), Profile.class));
+                            startActivity(new Intent(getApplicationContext(), SendEmailActivity.class));
                         }else{
                             Toast.makeText(getApplicationContext(),"Please Try again and Ensure email is already Registered",Toast.LENGTH_SHORT).show();
                         }

@@ -13,9 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
         android:padding="10dp"
-        android:text="Welcome to RedSky Shop"
+        android:text="@string/welcome_to_redsky_shop"
         android:textColor="@color/black"
         android:textColorLink="@color/black"
         android:textSize="24sp"
@@ -24,12 +23,12 @@
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="183dp"
         android:background="@color/colorTransparentWhite"
-        android:hint="Enter your email"
+        android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
         android:textColorHighlight="@color/black" />
@@ -37,16 +36,16 @@
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="37dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:background="@color/colorTransparentWhite"
-        android:hint="Enter your Password"
+        android:hint="@string/enter_your_password"
         android:inputType="textPassword"
         android:textColor="@color/black"
         android:textColorHighlight="@color/black"
         android:textColorLink="@color/black" />
-    />
+
 
     <Button
         android:id="@+id/buttonSignin"
@@ -54,8 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="158dp"
-        android:text="Login" />
+        android:text="@string/login" />
 
     <TextView
         android:id="@+id/textViewSignup"
@@ -75,7 +73,7 @@
         android:layout_alignStart="@+id/buttonSignin"
         android:layout_marginTop="113dp"
         android:padding="10dp"
-        android:text="User Login"
+        android:text="@string/user_login"
         android:textColor="@color/black"
         android:textSize="18sp" />
 

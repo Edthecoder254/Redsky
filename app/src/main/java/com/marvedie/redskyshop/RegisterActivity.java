@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (firebaseAuth.getCurrentUser() != null){
             //start profile activity
             finish();
-            startActivity(new Intent(getApplicationContext(), Profile.class));
+            startActivity(new Intent(getApplicationContext(), SendEmailActivity.class));
         }
         progressDialog = new ProgressDialog(this);
 
@@ -99,7 +99,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             Toast.makeText(getApplicationContext(),"User Register Successful",Toast.LENGTH_SHORT).show();
                             //open new activity.
                             finish();
-                            startActivity(new Intent(getApplicationContext(), Profile.class));
+                            startActivity(new Intent(getApplicationContext(), SendEmailActivity.class));
 
                         } else {
                             //to check if email is already register

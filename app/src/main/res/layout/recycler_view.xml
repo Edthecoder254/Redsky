@@ -14,7 +14,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="#ECEFF1">
+        android:background="@color/colorTransparentWhite">
 
         <ImageView
             android:id="@+id/imageView"
@@ -22,7 +22,8 @@
             android:layout_height="200dp"
             android:src="@mipmap/ic_launcher"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/ImageNameTextView"
@@ -31,9 +32,10 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="JSon Image Description"
+            android:text="@string/ImageDescription"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
+
 
     </RelativeLayout>
 

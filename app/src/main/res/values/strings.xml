@@ -5,4 +5,18 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
+    <string name="welcome_to_redsky_shop">Welcome to RedSky Shop</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="login">Login</string>
+    <string name="user_login">User Login</string>
+    <string name="register_user">Register User</string>
+    <string name="already_registered_sign_in_here">Already Registered? Sign in here</string>
+    <string name="sign_in_using_phone_number">Sign In using Phone Number</string>
+    <string name="user_registration">User Registration</string>
+    <string name="json_image_description">JSon Image Description</string>
+    <string name="ImageDescription">Image_description</string>
+    <string name="todo">TODO</string>
+    <string name="SendEmail">Use the subject Redsky to contact us regarding a Business Partnership, Complaints or Compliments
+        ( ͡° ͜ʖ ͡°) :</string>
 </resources>
