@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/white_4"
+    android:background="@drawable/sneaker_background"
     tools:context=".LoginActivity">
 
     <TextView
@@ -14,9 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
-        android:text="@string/welcome_to_redsky_shop"
-        android:textColor="@color/black"
-        android:textColorLink="@color/black"
+        android:text="Welcome to Redsky Apparel"
+        android:textColor="@color/blue_grey_300"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -30,8 +29,8 @@
         android:background="@color/colorTransparentWhite"
         android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/black" />
+        android:textColor="@color/red_200"
+        android:textColorHighlight="@color/red_200" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -49,10 +48,11 @@
 
     <Button
         android:id="@+id/buttonSignin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textViewSignup"
+        android:background="@color/amber_200"
         android:text="@string/login" />
 
     <TextView
@@ -70,12 +70,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/buttonSignin"
-        android:layout_marginTop="113dp"
-        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:padding="15dp"
         android:text="@string/user_login"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/amber_200"
+        android:textSize="22sp" />
 
 
 </RelativeLayout>

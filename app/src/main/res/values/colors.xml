@@ -9,6 +9,8 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorTransparentWhite">#cccccc</color>
     <color name="backgroundfragment">#3e0917</color>
+    <color name="overlayBackground">#7f333639</color>
+    <color name="overlayActionBar">#0e0d0e</color>
 
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>

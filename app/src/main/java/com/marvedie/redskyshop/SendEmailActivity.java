@@ -29,7 +29,7 @@ public class SendEmailActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                textTo.setText("marvedie254@gmail.com");
+                textTo.setText("marvedie254@gmail.com ");
                 textTo.setEnabled(false);
                 String to = textTo.getText().toString();
                 String subject = textSubject.getText().toString();

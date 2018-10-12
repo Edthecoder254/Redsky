@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/white_4"
+    android:background="@drawable/sneaker_background"
     tools:context=".RegisterActivity">
 
     <EditText
@@ -36,13 +36,15 @@
 
     <Button
         android:id="@+id/buttonRegister"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="134dp"
         android:text="@string/register_user"
-        android:textColorLink="@color/colorPrimary" />
+        android:textColor="@color/black"
+        android:background="@color/amber_200"
+        />
 
     <TextView
         android:id="@+id/textViewSignin"
@@ -53,6 +55,7 @@
         android:layout_marginBottom="36dp"
         android:text="@string/already_registered_sign_in_here"
         android:textAlignment="center"
+        android:background="@color/amber_200"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
@@ -65,9 +68,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:padding="10dp"
-        android:text="@string/welcome_to_redsky_shop"
-        android:textColor="@color/black"
-        android:textColorLink="@color/black"
+        android:text="Welcome to Redsky Apparel"
+        android:textColor="@color/blue_grey_200"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -79,7 +81,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="107dp"
         android:text="@string/user_registration"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textColor="@color/amber_200"
+        android:textSize="22sp" />
 
 </RelativeLayout>

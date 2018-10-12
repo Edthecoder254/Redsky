@@ -55,10 +55,12 @@ public class HomeFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
 
         // Setting RecyclerView size true.
-        recyclerView.setHasFixedSize(true);
+        //recyclerView.setHasFixedSize(true);
 
         // Setting RecyclerView layout as LinearLayout.
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+      //  recyclerView.setAdapter(adapter);
 
         // Assign activity this to progress dialog.
         progressDialog = new ProgressDialog(getActivity());
@@ -71,6 +73,7 @@ public class HomeFragment extends Fragment {
 
         // Setting up Firebase image upload folder path in databaseReference.
         databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
+
 
         // Adding Add Value Event Listener to databaseReference.
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -86,7 +89,7 @@ public class HomeFragment extends Fragment {
                     list.add(imageUploadInfo);
                 }
 
-                adapter = new RecyclerViewAdapter(getActivity().getApplicationContext(), list);
+                adapter = new RecyclerViewAdapter(getActivity(), list);
 
                 recyclerView.setAdapter(adapter);
 

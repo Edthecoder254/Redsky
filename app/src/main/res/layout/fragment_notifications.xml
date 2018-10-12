@@ -22,7 +22,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="114dp"
-        app:srcCompat="@drawable/balenciagabw" />
+        app:srcCompat="@drawable/sportshoe" />
 
     <Button
         android:id="@+id/btnLogin"

@@ -37,15 +37,13 @@ public class NotificationsFragment extends Fragment {
             btnLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity( new Intent(getActivity(), LoginActivity.class));
-
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
                 }
             });
 
             btnRegister.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     startActivity(new Intent(getActivity(), RegisterActivity.class));
                 }
             });

@@ -30,6 +30,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.UUID;
 
 public class AdminUpload extends AppCompatActivity {
 
@@ -56,32 +57,7 @@ public class AdminUpload extends AppCompatActivity {
 
     ProgressDialog progressDialog ;
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == Image_Request_Code && resultCode == RESULT_OK && data != null && data.getData() != null) {
-
-            FilePathUri = data.getData();
-
-            try {
-
-                // Getting selected image into Bitmap.
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), FilePathUri);
-
-                // Setting up bitmap selected image into ImageView.
-                SelectImage.setImageBitmap(bitmap);
-
-                // After selecting image change choose button above text.
-                ChooseButton.setText("Image Selected");
-
-            }
-            catch (IOException e) {
-
-                e.printStackTrace();
-            }
-        }
-    }
 
 
 
@@ -129,6 +105,37 @@ public class AdminUpload extends AppCompatActivity {
             }
         });
 
+
+
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == Image_Request_Code && resultCode == RESULT_OK && data != null && data.getData() != null) {
+
+            FilePathUri = data.getData();
+
+            try {
+
+                // Getting selected image into Bitmap.
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), FilePathUri);
+
+                // Setting up bitmap selected image into ImageView.
+                SelectImage.setImageBitmap(bitmap);
+
+                // After selecting image change choose button above text.
+                ChooseButton.setText("Image Selected");
+
+            }
+            catch (IOException e) {
+
+                e.printStackTrace();
+            }
+        }
     }
     // Creating Method to get the selected image file Extension from File Path URI.
     public String GetFileExtension(Uri uri) {
@@ -156,6 +163,10 @@ public class AdminUpload extends AppCompatActivity {
             progressDialog.show();
 
             // Creating second StorageReference.
+
+            //StorageReference storageReference2nd = storageReference.child(Storage_Path+ UUID.randomUUID().toString());
+
+
             StorageReference storageReference2nd = storageReference.child(Storage_Path + System.currentTimeMillis() + "." + GetFileExtension(FilePathUri));
 
             // Adding addOnSuccessListener to second StorageReference.
