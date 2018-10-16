@@ -9,7 +9,7 @@
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true"
     app:contentPadding="5dp"
-    tools:context="com.marvedie.redskyshop.Take2.PostDetailActivity">
+    tools:context="com.marvedie.redskyshop.take2.PostDetailActivity">
 
     <ScrollView
         android:layout_width="match_parent"

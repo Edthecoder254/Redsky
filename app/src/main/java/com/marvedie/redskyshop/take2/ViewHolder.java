@@ -1,4 +1,4 @@
-package com.marvedie.redskyshop.Take2;
+package com.marvedie.redskyshop.take2;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -1,6 +1,8 @@
-package com.marvedie.redskyshop.Take2;
+package com.marvedie.redskyshop.take2;
 
+import android.app.ProgressDialog;
 import android.app.WallpaperManager;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -70,26 +72,24 @@ public class PostDetailActivity extends AppCompatActivity {
         mImageIv.setImageBitmap(bmp);
 
         //get image from imageview as bitmap
-        bitmap = ((BitmapDrawable)mImageIv.getDrawable()).getBitmap();
+        bitmap = ((BitmapDrawable) mImageIv.getDrawable()).getBitmap();
 
         //save btn click handle
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //if os is >= marshmallow we need runtime permission to save image
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
-                            PackageManager.PERMISSION_DENIED){
+                            PackageManager.PERMISSION_DENIED) {
                         String[] permission = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
                         //show popup to grant permission
                         requestPermissions(permission, WRITE_EXTERNAL_STORAGE_CODE);
-                    }
-                    else {
+                    } else {
                         //permission already granted, save image
                         saveImage();
                     }
-                }
-                else {
+                } else {
                     //System os is < marshmallow, save image
                     saveImage();
                 }
@@ -117,8 +117,7 @@ public class PostDetailActivity extends AppCompatActivity {
         try {
             myWallManager.setBitmap(bitmap);
             Toast.makeText(this, "Wallpaper set...", Toast.LENGTH_SHORT).show();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
@@ -133,7 +132,7 @@ public class PostDetailActivity extends AppCompatActivity {
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
             fOut.flush();
             fOut.close();
-            file.setReadable(true,false);
+            file.setReadable(true, false);
             //intent to share image and text
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -141,8 +140,7 @@ public class PostDetailActivity extends AppCompatActivity {
             intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
             intent.setType("image/png");
             startActivity(Intent.createChooser(intent, "Share via"));
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
@@ -154,7 +152,7 @@ public class PostDetailActivity extends AppCompatActivity {
         //path to external storage
         File path = Environment.getExternalStorageDirectory();
         //create folder named "Firebase"
-        File dir = new File(path+"/Firebase/");
+        File dir = new File(path + "/Firebase/");
         dir.mkdirs();
         //image name
         String imageName = timeStamp + ".PNG";
@@ -165,9 +163,8 @@ public class PostDetailActivity extends AppCompatActivity {
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
             out.flush();
             out.close();
-            Toast.makeText(this, imageName+" saved to"+ dir, Toast.LENGTH_SHORT).show();
-        }
-        catch (Exception e){
+            Toast.makeText(this, imageName + " saved to" + dir, Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
             //failed saving image
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
@@ -182,15 +179,14 @@ public class PostDetailActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case WRITE_EXTERNAL_STORAGE_CODE:{
+        switch (requestCode) {
+            case WRITE_EXTERNAL_STORAGE_CODE: {
                 //if request code is cancelled the result arrays are empty
                 if (grantResults.length > 0 && grantResults[0] ==
-                        PackageManager.PERMISSION_GRANTED){
+                        PackageManager.PERMISSION_GRANTED) {
                     //permission is granted, save image
                     saveImage();
-                }
-                else {
+                } else {
                     //permission denied
                     Toast.makeText(this, "enable permission to save image", Toast.LENGTH_SHORT).show();
                 }
@@ -199,3 +195,4 @@ public class PostDetailActivity extends AppCompatActivity {
 
     }
 }
+

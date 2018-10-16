@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
+    android:background="@drawable/sneaker_background"
     tools:context=".SendEmailActivity" >
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/linearLayout1"
@@ -15,6 +16,7 @@
             android:id="@+id/textViewPhoneNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:text="@string/SendEmail"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -34,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Subject : "
+            android:textColor="@color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
@@ -48,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Message : "
+            android:textColor="@color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
@@ -56,11 +60,13 @@
             android:layout_height="wrap_content"
             android:gravity="top"
             android:inputType="textMultiLine"
+            android:textColor="@color/white"
             android:lines="5" />
 
         <Button
             android:id="@+id/buttonSend"
             android:layout_width="fill_parent"
+            android:background="@drawable/button_bg"
             android:layout_height="wrap_content"
             android:text="Send" />
 

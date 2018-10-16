@@ -1,4 +1,4 @@
-package com.marvedie.redskyshop.Take2;
+package com.marvedie.redskyshop.take2;
 
 public class Model {
 

@@ -11,8 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -49,12 +47,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         //Loading image from Glide library.
 
-        //Picasso.get().load(UploadInfo.getImageURL()).into(holder.imageView);
+        Picasso.get().load(UploadInfo.getImageURL()).into(holder.imageView);
 
        // holder.imageView.setImageBitmap(UploadInfo.getImageURL());
 
 
-        Glide.with(context).load(UploadInfo.getImageURL()).into(holder.imageView);
+       // Glide.with(context).load(UploadInfo.getImageURL()).into(holder.imageView);
 
 
 

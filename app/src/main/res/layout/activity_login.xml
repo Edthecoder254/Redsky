@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sneaker_background"
+    android:background="@drawable/bg"
     tools:context=".LoginActivity">
 
     <TextView
@@ -15,17 +15,17 @@
         android:layout_centerHorizontal="true"
         android:padding="10dp"
         android:text="Welcome to Redsky Apparel"
-        android:textColor="@color/blue_grey_300"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="183dp"
+        android:layout_marginTop="219dp"
         android:background="@color/colorTransparentWhite"
         android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
@@ -35,9 +35,10 @@
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
+        android:layout_marginBottom="226dp"
         android:background="@color/colorTransparentWhite"
         android:hint="@string/enter_your_password"
         android:inputType="textPassword"
@@ -48,11 +49,12 @@
 
     <Button
         android:id="@+id/buttonSignin"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/textViewSignup"
-        android:background="@color/amber_200"
+        android:layout_alignBaseline="@+id/textViewSignup"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/amber_200"
+        android:background="@drawable/button_bg"
         android:text="@string/login" />
 
     <TextView

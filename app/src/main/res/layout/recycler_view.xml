@@ -18,12 +18,12 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="@string/todo"
-            android:src="@drawable/unbranded" />
+            android:src="@drawable/redskyapparel" />
 
         <TextView
             android:id="@+id/ImageNameTextView"

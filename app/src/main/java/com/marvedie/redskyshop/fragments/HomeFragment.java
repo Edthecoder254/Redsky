@@ -1,5 +1,6 @@
 package com.marvedie.redskyshop.fragments;
 
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -45,6 +48,8 @@ public class HomeFragment extends Fragment {
     // Creating List of ImageUploadInfo class.
     List<ImageUploadInfo> list = new ArrayList<>();
 
+    //Button to view more pics
+    Button btnmorepics;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -60,7 +65,7 @@ public class HomeFragment extends Fragment {
         // Setting RecyclerView layout as LinearLayout.
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-      //  recyclerView.setAdapter(adapter);
+        //  recyclerView.setAdapter(adapter);
 
         // Assign activity this to progress dialog.
         progressDialog = new ProgressDialog(getActivity());
@@ -70,11 +75,17 @@ public class HomeFragment extends Fragment {
 
         // Showing progress dialog.
         progressDialog.show();
-
+        //Button morepics
+        btnmorepics = view.findViewById(R.id.btnmorepics);
         // Setting up Firebase image upload folder path in databaseReference.
         databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
 
-
+        btnmorepics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), com.marvedie.redskyshop.take2.PostsListActivity.class));
+            }
+        });
         // Adding Add Value Event Listener to databaseReference.
         databaseReference.addValueEventListener(new ValueEventListener() {
 

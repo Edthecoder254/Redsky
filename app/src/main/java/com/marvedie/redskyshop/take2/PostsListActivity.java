@@ -1,4 +1,4 @@
-package com.marvedie.redskyshop.Take2;
+package com.marvedie.redskyshop.take2;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -92,7 +92,8 @@ public class PostsListActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                    public ViewHolder
+                    onCreateViewHolder(ViewGroup parent, int viewType) {
 
                         ViewHolder viewHolder = super.onCreateViewHolder(parent, viewType);
 
@@ -232,6 +233,12 @@ public class PostsListActivity extends AppCompatActivity {
         if (id == R.id.action_sort) {
             //display alert dialog to choose sorting
             showSortDialog();
+            return true;
+        }
+        if (id == R.id.action_add) {
+        //start Add POst Activity
+            startActivity(new Intent(PostsListActivity.this,AddPostActivity.class));
+
             return true;
         }
 

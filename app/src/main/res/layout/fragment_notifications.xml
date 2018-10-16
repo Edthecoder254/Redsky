@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:Tools="http://schemas.android.com/tools"
+    android:background="@drawable/sneaker_background"
     Tools:Content = ".NotificationsFragment" >
 
     <TextView
@@ -11,18 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
         android:layout_marginTop="17dp"
         android:text="Hey, We are giving you a chance to sell your products. Login/Register with an Email to Begin"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
-
-    <ImageView
-        android:id="@+id/ImageViewSneakerz"
-        android:layout_width="254dp"
-        android:layout_height="191dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="114dp"
-        app:srcCompat="@drawable/sportshoe" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -32,15 +25,17 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="19dp"
         android:layout_marginStart="13dp"
+        android:background="@drawable/button_bg"
         android:text="Login" />
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
+        android:layout_width="106dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/btnLogin"
         android:layout_marginEnd="13dp"
+        android:background="@drawable/button_bg"
         android:text="Register" />
 
 </RelativeLayout>

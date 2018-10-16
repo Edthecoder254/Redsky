@@ -185,7 +185,7 @@ public class AdminUpload extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Image Uploaded Successfully ", Toast.LENGTH_LONG).show();
 
                             @SuppressWarnings("VisibleForTests")
-                            ImageUploadInfo imageUploadInfo = new ImageUploadInfo (TempImageName, taskSnapshot.getMetadata().getReference().getDownloadUrl().toString());
+                            ImageUploadInfo imageUploadInfo = new ImageUploadInfo (TempImageName, taskSnapshot.getMetadata().getDownloadUrl().toString());
 
                             // Getting image upload ID.
                             String ImageUploadId = databaseReference.push().getKey();

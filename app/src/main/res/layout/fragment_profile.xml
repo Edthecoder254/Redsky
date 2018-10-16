@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/sneaker_background"
     android:layout_height="match_parent">
 
     <TextView
@@ -9,18 +10,20 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:textColor="@color/white"
         android:text="Profile"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
     <Button
         android:id="@+id/btnAdminUpload"
-        android:layout_width="wrap_content"
+        android:layout_width="152dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginEnd="103dp"
+        android:background="@drawable/button_bg"
+        android:enabled="false"
         android:text="Upload Products"
-        android:enabled="false"/>
+        android:textColor="@color/amber_200" />
 
 </RelativeLayout>
