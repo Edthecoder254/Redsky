@@ -43,6 +43,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //for the shopping cart
+    implementation 'com.google.android.gms:play-services-wallet:11.8.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation('com.paypal.sdk:paypal-android-sdk:2.14.4') {
+        exclude group: 'io.card'}
 
 }
 apply plugin: 'com.google.gms.google-services'

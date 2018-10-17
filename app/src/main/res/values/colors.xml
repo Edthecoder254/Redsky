@@ -288,6 +288,14 @@
     <color name="grey_800">#424242</color>
     <color name="grey_900">#212121</color>
 
-
+//colors for shopping cart
+    <color name="colorPrimary1">#CDDC39</color>
+    <color name="colorPrimaryDark1">#AFB42B</color>
+    <color name="colorPrimaryLight1">#F0F4C3</color>
+    <color name="colorAccent1">#795548</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="icons">#ffffff</color>
+    <color name="colorDivider">#BDBDBD</color>
 
     </resources>
