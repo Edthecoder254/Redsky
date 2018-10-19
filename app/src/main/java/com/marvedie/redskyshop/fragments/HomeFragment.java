@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
     List<ImageUploadInfo> list = new ArrayList<>();
 
     //Button to view more pics
-    Button btnmorepics;
+    //Button btnmorepics;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -76,16 +76,16 @@ public class HomeFragment extends Fragment {
         // Showing progress dialog.
         progressDialog.show();
         //Button morepics
-        btnmorepics = view.findViewById(R.id.btnmorepics);
+       // btnmorepics = view.findViewById(R.id.btnmorepics);
         // Setting up Firebase image upload folder path in databaseReference.
         databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
 
-        btnmorepics.setOnClickListener(new View.OnClickListener() {
+      /*  btnmorepics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), com.marvedie.redskyshop.take2.PostsListActivity.class));
             }
-        });
+        });*/
         // Adding Add Value Event Listener to databaseReference.
         databaseReference.addValueEventListener(new ValueEventListener() {
 

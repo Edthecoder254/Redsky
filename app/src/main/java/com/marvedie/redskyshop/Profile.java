@@ -1,5 +1,6 @@
 package com.marvedie.redskyshop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -11,8 +12,9 @@ import com.marvedie.redskyshop.fragments.DashboardFragment;
 import com.marvedie.redskyshop.fragments.HomeFragment;
 import com.marvedie.redskyshop.fragments.NotificationsFragment;
 import com.marvedie.redskyshop.fragments.ProfileFragment;
+import com.marvedie.redskyshop.shoppingcart.ShoppingActivity;
+import com.marvedie.redskyshop.take2.PostsListActivity;
 
-//implement the interface OnNavigationItemSelectedListener in your activity class
 public class Profile extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
 
@@ -37,14 +39,16 @@ public class Profile extends AppCompatActivity implements BottomNavigationView.O
 
         switch (item.getItemId()) {
             case R.id.navigation_home:
-                fragment = new HomeFragment();
+                startActivity(new Intent(this, PostsListActivity.class));
+                //fragment = new HomeFragment();
                 break;
 
-            case R.id.navigation_dashboard:
-                fragment = new DashboardFragment();
+            case R.id.navigation_cart:
+                startActivity(new Intent(this, ShoppingActivity.class));
+                //fragment = new DashboardFragment();
                 break;
 
-            case R.id.navigation_notifications:
+            case R.id.navigation_sell:
                 fragment = new NotificationsFragment();
                 break;
 

@@ -1,6 +1,5 @@
 package com.marvedie.redskyshop.shoppingcart;
 
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;

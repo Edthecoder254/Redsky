@@ -32,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent startActivityIntent = new Intent(SplashActivity.this, com.marvedie.redskyshop.shoppingcart.ShoppingActivity.class);
+                Intent startActivityIntent = new Intent(SplashActivity.this, Profile.class);
                 startActivity(startActivityIntent);
                 SplashActivity.this.finish();
             }

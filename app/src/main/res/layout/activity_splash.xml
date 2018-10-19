@@ -31,8 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:textStyle="italic"
-            android:textSize="13dp"
-            android:text="@string/android_pay"/>
+            android:textSize="13sp"
+            android:text="Redsky Apparel"/>
     </LinearLayout>
 
 </RelativeLayout>
