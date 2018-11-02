@@ -25,7 +25,7 @@ public class Profile extends AppCompatActivity implements BottomNavigationView.O
 
 
         //loading the default fragment
-        loadFragment(new HomeFragment());
+        loadFragment(new ProfileFragment());
 
         //getting bottom navigation view and attaching the listener
         BottomNavigationView navigation = findViewById(R.id.navigation);
